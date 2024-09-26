@@ -1,7 +1,7 @@
-import fetch from 'node-fetch';
-import * as fs from 'fs';
-import * as path from 'path';
-import { JSDOM } from 'jsdom';
+// import fetch from "node-fetch";
+import * as fs from "fs";
+import * as path from "path";
+import { JSDOM } from "jsdom";
 
 export async function fetchAndSave(url: string) {
   const response = await fetch(url);
@@ -27,8 +27,8 @@ export async function printMetadata(url: string) {
   const dom = new JSDOM(html);
   const document = dom.window._document;
 
-  const links = document.querySelectorAll('a').length;
-  const images = document.querySelectorAll('img').length;
+  const links = document.querySelectorAll("a").length;
+  const images = document.querySelectorAll("img").length;
   const lastFetch = new Date().toUTCString();
   const domain = new URL(url).hostname;
 

@@ -9,9 +9,8 @@ if (args.length === 0) {
 }
 
 // Check if the user wants metadata
-const isMetadata = args[0] === '--metadata';
+const isMetadata = args[0] === 'metadata';
 const urls = isMetadata ? args.slice(1) : args;
-
 urls.forEach(async (url) => {
   try {
     if (isMetadata) {

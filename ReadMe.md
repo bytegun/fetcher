@@ -26,5 +26,5 @@ This command-line tool fetches web pages and saves them to disk.
 3. To print metadata for a URL:
 
    ```bash
-   docker run --rm fetcher --metadata https://www.google.com
+   docker run --rm fetcher metadata https://www.google.com
    ```
